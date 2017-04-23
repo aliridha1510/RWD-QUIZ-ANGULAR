@@ -1,0 +1,80 @@
+<div class="container">
+    <h3>Responsive Web Design Quiz  </h3>
+    <div class="raw">
+    <section>
+        <steps on-finish="finished()"> <!-- Steps 1 -->
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped active"
+                     role="progressbar" aria-valuenow="45" aria-valuemin="0"
+                     aria-valuemax="100" style="width: 45%">
+                    <span class="sr-only">45% Complete addddddddddddaaaaaaa</span>
+                </div>
+            </div>
+            <step class="email">
+                <b>Bitte schrieben sie hier Ihre E-mail vor die Quiz duerchfuhren</b>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2"
+                           ng-model="email" >
+                    <span class="input-group-addon" id="basic-addon2">@th-brandenburg.de</span>
+
+                </div>
+                <br />
+                <button class="btn btn-primary" step-next ng-disabled="!email.length">Start the Quiz</button>
+            </step>
+                                       <!-- Steps 1 -->
+            <step class="step1" name="first">
+                <button step-previous class="btn btn-primary">Prev</button>
+                <button class="btn btn-primary" step-next ng-click="showResult()">Next</button>
+                <h3>1. Bootstrap Bootstrap 3 is mobile-first</h3>
+                <input type="radio" ng-model="step1.trueValue" value="true"> <b>
+                True</b> <br>
+                <input type="radio" ng-model="step1.falseValue" value="false">
+                <b> false </b> <br>
+            </step>
+                                       <!-- Steps 2 --> <step class="step2">
+                <button step-previous class="btn btn-primary">Prev</button>
+                <button step-next class="btn btn-primary" ng-click="showResult()">Next</button>
+
+                <h3>2. Which class provides a responsi fixed width container?</h3>
+                <input type="radio" ng-model="step2.trueValue" value="true">
+                container <br>
+                <input type="radio" ng-model="step2.falseValue" value="false">
+                container-fixed <br>
+            </step> <step class="step3">
+                <button step-previous class="btn btn-primary">Prev</button>
+                <button step-next class="btn btn-primary" ng-click="showResult()">Next</button>
+                <h3>What is responsive web design ?</h3>
+                <input type="radio" checked autocomplete="on"
+                       ng-model="step3.trueValue" value="true"> A way of designing
+                                                                web sites that focuses on the viewport of the device. <br>
+                <input type="radio" autocomplete="on" ng-model="step3.1"
+                       value="false">A way of designing web pages by using cascading
+                                                                style sheets. <br>
+                <input type="radio" autocomplete="on" ng-model="step3.2"
+                       value="false">Using media queries to determine size of
+                                                                viewports. <br>
+                <input type="radio" autocomplete="on" ng-model="step3.3"
+                       value="false">All of the above </step> <step>
+
+                <button step-previous class="btn btn-primary">Prev</button>
+                <button step-next class="btn btn-primary" ng-click="showResult()">Next</button>
+                <h3>Which class provides a full width container, spanning the
+                    entire width of the viewport? 3</h3>
+                <input type="radio" checked autocomplete="on"
+                       ng-model="step4.trueValue" value="true">.container-fluid <br>
+                <input type="radio" autocomplete="on" ng-model="step4.falseValue" value="false">.container<br>
+                <input type="radio" autocomplete="on" ng-model="step4.falseValue" value="false">.container-fixed<br>
+
+            </step>
+            <step class="step4" name="last">
+
+                <button step-previous class="btn btn-primary">Prev</button>
+                <button step-next class="btn btn-primary" ng-click="showResult()">Next</button>
+                <button step-finish class="btn btn-primary" type="submit" ng-click="final()">Hier click um Result zu bekommen !!!</button>
+                <p>{{ houh }}</p>
+                <h3>Result !!!</h3>
+            </step>
+        </steps>
+    </section>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+node {
+    stage 'Checkout'
+    // Checkout code from repository
+    checkout scm
+
+    stage 'Build'
+    sh "npm install"
+    sh "npm build"
+
+    stage 'Deploy '
+    sh "cp -Rf dist/*  /var/www/gui-track"
+
+
+
+}
