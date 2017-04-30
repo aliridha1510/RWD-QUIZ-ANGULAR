@@ -13,5 +13,5 @@ angular.module('myApp', [
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider, $scope) {
 
-    // $routeProvider.otherwise({redirectTo: 'home'});
+    $routeProvider.otherwise({ redirectTo: 'home' });
 }]);
