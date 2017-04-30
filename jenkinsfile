@@ -5,10 +5,10 @@ node {
 
     stage 'Build'
     sh "npm install"
-    sh "npm build"
+    sh "gulp"
 
     stage 'Deploy '
-    sh "cp -Rf dist/*  /var/www/gui-track"
+    sh "cp -Rf dist.prod/*  /var/www/web-responsive"
 
 
 
