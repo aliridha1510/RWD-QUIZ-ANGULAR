@@ -5,10 +5,7 @@
 
 <head>
     <meta charset="utf-8">
-    <!--  Diese Aussage gilt nur für den Internet Explorer. Es stellt sicher,
-     dass es die neueste Version des Rendering-Engine verwendet.-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>responsive webdesign</title>
     <meta name="description" content="">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -28,8 +25,8 @@
 
 <body>
     <div class="navbar navbar-inverse navbar-static-top">
-        <div class="container" backgroud="fff">
-            <a href="#home" class="navbar-brand">Responsive Web Desgin <small> 02-05-2017</small>
+        <div class="container">
+            <a href="#" class="navbar-brand">Responsive Web Desgin <small> 02-05-2017</small>
             </a> <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse"></button>
             <div class="collapse navbar-collapse navHeaderCollapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -38,9 +35,10 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Social Media</a>
                         <ul class="dropdown-menu">
-                            <li><a href="#calender">Event List</a></li>
-                            <li><a href="#count">Count</a></li>
-
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Google+</a></li>
+                            <li><a href="#">Instagram</a></li>
                         </ul>
                     </li>
                     <li><a href="#contact">Contact</a></li>
@@ -49,40 +47,31 @@
         </div>
     </div>
     <div ng-view></div>
-    <center>
 
+    <div class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container">
+            <p class="navbar-text pull-left">©2017 - Site Built By Mr. M.
+            </p>
 
-        <div class="navbar navbar-default navbar-fixed-bottom">
-            <div class="container">
-                <p class="navbar-text pull-left">Copyright ©2017 - RWD
-                </p>
-
-                <a href="https://www.youtube.com/user/FHBChannel" class="navbar-btn btn-danger btn pull-right">
-                    <span class="glyphicon glyphicon-star"></span> Technische Hochschule Brandenburg</a>
-            </div>
-
-
+            <a href="https://www.youtube.com/user/FHBChannel" class="navbar-btn btn-danger btn pull-right">
+                <span class="glyphicon glyphicon-star"></span> Technische Hochschule Brandenburg</a>
         </div>
-        <!-- In production use:
+
+
+    </div>
+    <!-- In production use:
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-
 -->
-
-
-        <script src="bower_components/angular/angular.js"></script>
-        <script src="bower_components/angular-route/angular-route.js"></script>
-        <script src="app.js"></script>
-        <script src="home/home.js"></script>
-        <script src="contact/contact.js"></script>
-        <script src="quiz/quiz.js"></script>
-        <script src="calender/calender.js"></script>
-
-        <script src="count/count.js"></script>
-        <script src="components/version/version.js"></script>
-        <script src="components/version/version-directive.js"></script>
-        <script src="components/version/interpolate-filter.js"></script>
-        <script src="bower_components/angular-steps/dist/angular-steps.js"></script>
-
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="home/home.js"></script>
+    <script src="contact/contact.js"></script>
+    <script src="quiz/quiz.js"></script>
+    <script src="components/version/version.js"></script>
+    <script src="components/version/version-directive.js"></script>
+    <script src="components/version/interpolate-filter.js"></script>
+    <script src="bower_components/angular-steps/dist/angular-steps.js"></script>
 </body>
 
 </html>

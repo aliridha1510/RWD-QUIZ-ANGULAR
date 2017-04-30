@@ -1,68 +1,108 @@
 'use strict';
 
-angular.module('myApp.contact', ['ngRoute','angular-steps'])
+angular.module('myApp.quiz', ['ngRoute', 'angular-steps'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/quiz', {
-    templateUrl: 'quiz/quiz.html',
-    controller: 'QuizCtrl'
-  });
+    $routeProvider.when('/quiz', {
+        templateUrl: 'quiz/quiz.html',
+        controller: 'QuizCtrl'
+    });
 }])
 
 .controller('QuizCtrl', function($scope) {
 
 
-    $scope.email='';
+
+
+
+
+    $scope.email = '';
 
     // create a message to display in our view
-    $scope.message = 'Everyone come and see how good I look!';
-
+    $scope.step = { tValue: '', fValue: '' };
 
     $scope.houh = "";
-    $scope.step1 = {'trueValue':true,'falseValue':false};
-    $scope.step2 ={ 'trueValue':true ,'falseValue':false};
-    $scope.step3 = {'trueValue':true,'falseValue':false};
-    $scope.step4 = {'trueValue':true,'falseValue':false};
-    $scope.step5 = {'trueValue':true,'falseValue':false};
+    $scope.step1 = { tValue: '', tValue: '' };
+
+    $scope.step2 = { tValue: '', fValue: '', fValue1: '', fValue2: '' };
+
+    $scope.step3 = { tValue: '', fValue: '', fValue1: '' };
+    $scope.step4 = { tValue: '', fValue: '', fValue1: '' };
+    $scope.step5 = { tValue: '', fValue: '', fValue1: '' };
+    $scope.step6 = { tValue: '', fValue: '', fValue1: '' };
+    $scope.step7 = { tValue: '', fValue: '', fValue1: '' };
+
+    $scope.message1 = " Haben sie die Responsive Web gut Verstanden";
+    $scope.message2 = " müssen sie noch die Responsive web design selb lernen";
 
 
+    // Alert Bootstrap angular 
+    $scope.alerts = [
+        { type: 'danger', msg: 'Oh snap! Bitte wälhlen sie .' },
+        { type: 'success', msg: 'Gut click nächste.' }
+    ];
 
-    $scope.showResult=function(){
-        console.log($scope.step1.trueValue);
-        $scope.ResultFinalQuiz = 0;
-        if ($scope.step1.trueValue === 'true' && $scope.step2.trueValue === 'true' ){
-            console.log("ok");
-            $scope.ResultFinalQuiz = $scope.ResultFinalQuiz + 1;
+    $scope.addAlert = function() {
+        $scope.alerts.push({ msg: 'Another alert!' });
+    };
+
+
+    $scope.quizsumbit = function() {
+        $scope.valeur = 0;
+        if ($scope.step.tValue === 'true') {
+            $scope.valeur = $scope.valeur + 1;
+
         }
-        else if($scope.step1.trueValue ==='false' && $scope.step2.falseValue ==='false'){
-            console.log("not ok");
-            $scope.ResultFinalQuiz = $scope.ResultFinalQuiz + 0 ;
-            console.log($scope.ResultFinalQuiz);
+        if ($scope.step1.tValue === 'true') {
+            $scope.valeur = $scope.valeur + 1;
+
+        }
+        if ($scope.step2.tValue === 'true') {
+            $scope.valeur = $scope.valeur + 1;
+
+        }
+        if ($scope.step3.tValue === 'true') {
+            $scope.valeur = $scope.valeur + 1;
+
+        }
+        if ($scope.step4.tValue === 'true') {
+            $scope.valeur = $scope.valeur + 1;
+
+        }
+        if ($scope.step5.tValue === 'true') {
+            $scope.valeur = $scope.valeur + 1;
+
+        }
+        if ($scope.step6.tValue === 'true') {
+            $scope.valeur = $scope.valeur + 1;
+
         }
 
-        $scope.final = function(){
-            if ($scope.ResultFinalQuiz === 0){
-                $scope.houh ="0 %";
-                console.log($scope.ResultFinalQuiz);
-                console.log("Bist Inteligent"+ $scope.houh);
-            }
-            else if ($scope.ResultFinalQuiz === 1){
-                $scope.houh ="10 %";
-                console.log("bist du duemm "+ $scope.houh);
-            }
+        if ($scope.step7.tValue === 'true') {
+            $scope.valeur = $scope.valeur + 1;
 
-            else if ($scope.ResultFinalQuiz === 2) {
-                $scope.houh = "20 %";
-                console.log("bist du duemm "+ $scope.houh);
+        }
+        console.log($scope.valeur);
 
 
-            }
-            else  ($scope.ResultFinalQuiz === 3)
-            $scope.houh = "30 %" ;
-            console.log("bist du duemm "+ $scope.houh);
+    }
+    $scope.houh = "";
+    $scope.final = function() {
+
+        $scope.prozent = ($scope.valeur / 7) * 100;
+
+        console.log($scope.prozent);
+        if ($scope.prozent < 10) {
+            $scope.houh = " Hi !!;  Haben Sie bekommen weniger als 10 Prozent ,";
+        } else if ($scope.prozent < 50) {
+            $scope.houh = " Hi!!   Haben Sie die nicht verstanden";
+
+        } else if ($scope.prozent < 51 && $scope.prozent > 99) {
+            $scope.houh = " Hi !! 50 Haben sie die nicht verstanden";
 
         }
 
 
     }
+
 });
