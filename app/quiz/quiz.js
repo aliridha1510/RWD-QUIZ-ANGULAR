@@ -11,31 +11,19 @@ angular.module('myApp.quiz', ['ngRoute', 'angular-steps'])
 
 .controller('QuizCtrl', function($scope) {
 
-
-
-
-
-
     $scope.email = '';
-
     // create a message to display in our view
     $scope.step = { tValue: '', fValue: '' };
-
     $scope.houh = "";
     $scope.step1 = { tValue: '', fValue: '' };
-
     $scope.step2 = { tValue: '', fValue: '', fValue1: '' };
-
     $scope.step3 = { tValue: '', fValue: '', fValue1: '' };
     $scope.step4 = { tValue: '', fValue: '', fValue1: '' };
     $scope.step5 = { tValue: '', fValue: '', fValue1: '' };
     $scope.step6 = { tValue: '', fValue: '', fValue1: '' };
     $scope.step7 = { tValue: '', fValue: '', fValue1: '' };
-
     $scope.message1 = " Haben sie die Responsive Web gut Verstanden";
     $scope.message2 = " müssen sie noch die Responsive web design selb lernen";
-
-
     // Alert Bootstrap angular 
     $scope.alerts = [
         { type: 'danger', msg: 'Oh snap! Bitte wälhlen sie .' },
@@ -64,17 +52,18 @@ angular.module('myApp.quiz', ['ngRoute', 'angular-steps'])
         $scope.step1 = { tValue: 'true', fValue: '' };
     }
     $scope.clickstep2button2 = function() {
-            $scope.step1 = { tValue: '', fValue: 'false' };
-        }
-        ///step3
-    $scope.clickstep2button1 = function() {
-        $scope.step2 = { tValue: 'true', fValue: '', fValue1: '' };
+        $scope.step1 = { tValue: '', fValue: 'false' };
     }
-    $scope.clickstep2button2 = function() {
-        $scope.step2 = { tValue: '', fValue: 'false', fValue1: '' };
+
+    ///step3
+    $scope.clickstep3button1 = function() {
+        $scope.step3 = { tValue: 'true', fValue: '', fValue1: '' };
     }
-    $scope.clickstep2button3 = function() {
-            $scope.step2 = { tValue: '', fValue: '', fValue1: 'false' };
+    $scope.clickstep3button2 = function() {
+        $scope.step3 = { tValue: '', fValue: 'false', fValue1: '' };
+    }
+    $scope.clickstep3button3 = function() {
+            $scope.step3 = { tValue: '', fValue: '', fValue1: 'false' };
         }
         ////step4
     $scope.clickstep4button1 = function() {
