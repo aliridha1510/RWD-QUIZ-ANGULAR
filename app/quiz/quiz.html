@@ -38,8 +38,8 @@
                     <button step-previous class="btn btn-primary" id="animer-1" value="Animer">Prev</button>
                     <button class="btn btn-primary" step-next ng-click="quizsumbit();addAlert()" id="animer-2" value="Animer">Next</button>
                     <h3>1. Bootstrap 3 is mobile-first</h3>
-                    <input type="radio" ng-model="step.tValue" value="true" name="step1option" ng-checked="!step.tValue" ng-clik="clickstepbutton1()"> <b>Richtig</b> <br>
-                    <input type="radio" ng-model="step.fValue" value="false" name="step1option" ng-checked="!step.fValue" ng-click="clickstepbutton2()">
+                    <input type="radio" ng-model="step.tValue" value="true" name="step1option" ng-clik="clickstepbutton1()"> <b>Richtig</b> <br>
+                    <input type="radio" ng-model="step.fValue" value="false" name="step2option" ng-click="clickstepbutton2()">
                     <b> Falsch</b> <br>
                 </step>
                 <!-- Steps 2 -->
@@ -57,8 +57,8 @@
                     <button step-previous class="btn btn-primary">Prev</button>
                     <button step-next class="btn btn-primary" ng-click="quizsumbit()">Next</button>
                     <h3>Fluid grid“ ist ein Begriff, der verwendet wird,um-------------zu beschreiben,</h3>
-                    <input type="radio" autocomplete="on" ng-model="step2.tValue" value="true" ng-checked="!step2.tValue" ng-clik="clickstep2button1()"> Ein Layout<br>
-                    <input type="radio" autocomplete="on" ng-model="step2.fValue" value="false" ng-checked="!step2.tValue" ng-clik="clickstep2button2()">Bilder
+                    <input type="radio" autocomplete="off" ng-model="step2.tValue" value="true" ng-checked="!step2.tValue" ng-clik="clickstep2button1()"> Ein Layout<br>
+                    <input type="radio" autocomplete="off" ng-model="step2.fValue" value="false" ng-checked="!step2.tValue" ng-clik="clickstep2button2()">Bilder
                     <br>
                     <input type="radio" autocomplete="on" ng-model="step2.fValue2" value="false" ng-checked="!step2.tValue" ng-clik="clickstep2button3()">Text <br>
                 </step>

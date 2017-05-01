@@ -22,9 +22,9 @@ angular.module('myApp.quiz', ['ngRoute', 'angular-steps'])
     $scope.step = { tValue: '', fValue: '' };
 
     $scope.houh = "";
-    $scope.step1 = { tValue: '', tValue: '' };
+    $scope.step1 = { tValue: '', fValue: '' };
 
-    $scope.step2 = { tValue: '', fValue: '', fValue1: '', fValue2: '' };
+    $scope.step2 = { tValue: '', fValue: '', fValue1: '' };
 
     $scope.step3 = { tValue: '', fValue: '', fValue1: '' };
     $scope.step4 = { tValue: '', fValue: '', fValue1: '' };
@@ -101,21 +101,12 @@ angular.module('myApp.quiz', ['ngRoute', 'angular-steps'])
         $scope.step6 = { tValue: 'true', fValue: '', fValue1: '' };
     }
     $scope.clickstep6button2 = function() {
-        $scope.step2 = { tValue: '', fValue: 'false', fValue1: '' };
+        $scope.step6 = { tValue: '', fValue: 'false', fValue1: '' };
     }
     $scope.clickstep6button3 = function() {
-            $scope.step2 = { tValue: '', fValue: '', fValue1: 'false' };
-        }
-        ////step7
-    $scope.clickstep7button1 = function() {
-        $scope.step2 = { tValue: 'true', fValue: '', fValue1: '' };
+        $scope.step6 = { tValue: '', fValue: '', fValue1: 'false' };
     }
-    $scope.clickstep7button2 = function() {
-        $scope.step7 = { tValue: '', fValue: 'false', fValue1: '' };
-    }
-    $scope.clickstep7button3 = function() {
-        $scope.step7 = { tValue: '', fValue: '', fValue1: 'false' };
-    }
+
 
     $scope.quizsumbit = function() {
         $scope.valeur = 0;
