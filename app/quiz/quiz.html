@@ -72,7 +72,7 @@
                     <button step-previous class="btn btn-primary">Prev</button>
                     <button step-next class="btn btn-primary" ng-click="quizsumbit()">Next</button>
                     <h3>„Responsive“ ist das Design einer Website, wenn ihre Seiten auf allen Browsern und auf allen Geräten optimal dargestellt werden.Optimal heisst :</h3>
-                    <input type="radio" checked autocomplete="on" ng-model="step4.tValue" value="true" ng-click="clickstep4button1()">Das gleichermaßen auf dem kleinen Screen eines Smartphones, auf dem Laptop-Bildschirm und auf dem riesigen Desktop-Monitor.<br>
+                    <input type="radio" autocomplete="on" ng-model="step4.tValue" value="true" ng-click="clickstep4button1()">Das gleichermaßen auf dem kleinen Screen eines Smartphones, auf dem Laptop-Bildschirm und auf dem riesigen Desktop-Monitor.<br>
                     <input type="radio" autocomplete="on" ng-model="step4.fValue" value="false" ng-click="clickstep4button2()">inhalt der Seiten unterscheidet sich
                     <br>
                     <input type="radio" autocomplete="on" ng-model="step4.fValue1" value="false" ng-click="clickstep4button3()">Seiten antworten nicht<br>
@@ -102,8 +102,24 @@
                 <step class="step4" name="last">
                     <button step-previous class="btn btn-primary">Prev</button>
                     <button step-next class="btn btn-primary" ng-click="quizsumbit()">Next</button>
-                    <h3>Do you understand the Responsive web design theme : ?</h3>
-                    Realy
+                    <div class="container">
+                        <blockquote class="quote-box">
+                            <p class="quotation-mark">
+                                “
+                            </p>
+                            <p class="quote-text">
+                                Do you understand the Responsive web design theme : ?
+                            </p>
+                            <hr>
+                            <div class="blog-post-actions">
+                                <p class="blog-post-bottom pull-left">
+                                    Realy </p>
+                                <p class="blog-post-bottom pull-right">
+                                    <span class="badge quote-badge">896</span>  ❤
+                                </p>
+                            </div>
+                        </blockquote>
+                    </div>
                     <button type="button" class="btn btn-danger" data-toggle="modal" data-target=".bs-example-modal-lg" ng-click="final()">Click here to get to Result.</button>
                     <h1 style="color: red"><b> {{prozent| number:0}}  </b></h1>
 
