@@ -24,66 +24,54 @@
                     <div class="progress-bar progress-bar-warning"></div>
                     <div class="progress-bar progress-bar-danger"></div>
                 </div>
-
                 <step class="email">
-                    <b>Bitte schrieben sie hier Ihre E-mail vor die Quiz duerchfuhren</b>
+                    <b>Please write your e-mail here before starting the quiz.</b>
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2" ng-model="email">
+                        <input type="text" class="form-control" placeholder="haouari@th-brandenburg.de" aria-describedby="basic-addon2" ng-model="email">
                         <span class="input-group-addon" id="basic-addon2"> </span>
-
                     </div>
                     <br/>
                     <button class="btn btn-primary" step-next ng-disabled="!email.length" id="animer-3" value="Animer">Start the Quiz</button>
                 </step>
                 <!-- Steps 1 -->
                 <step class="step1" name="first">
-
                     <button step-previous class="btn btn-primary" id="animer-1" value="Animer">Prev</button>
                     <button class="btn btn-primary" step-next ng-click="quizsumbit();addAlert()" id="animer-2" value="Animer">Next</button>
-
-                    <h3>1. Bootstrap Bootstrap 3 is mobile-first</h3>
-                    <input type="radio" ng-model="step.tValue" value="true" ng-init="checked=true"> <b>
-                True</b> <br>
+                    <h3>1. Bootstrap 3 is mobile-first</h3>
+                    <input type="radio" ng-model="step.tValue" value="true" ng-init="checked=true"> <b>Richtig</b> <br>
                     <input type="radio" ng-model="step.fValue" value="false" ng-init="checked=false">
-                    <b> false </b> <br>
-                    <span ng-if="checked" class="animate-if">
-                     This is removed when the checkbox is unchecked.
-                    </span>
-                    <div uib-alert ng-repeat="alert in alerts" ng-class="'alert-' + (alert.type || 'warning')">{{alert.msg}}</div>
+                    <b> Falsch </b> <br>
                 </step>
-
                 <!-- Steps 2 -->
                 <step class="step2">
                     <button step-previous class="btn btn-primary" id="animer-4" value="Animer">Prev</button>
                     <button step-next class="btn btn-primary" ng-click="quizsumbit()" id="animer" value="Animer">Next</button>
-
-                    <h3>2. Which class provides a responsi fixed width container?</h3>
+                    <h3>Mit welchen Einheiten werden mit RWD gebaut</h3>
                     <div class="btn-group">
-                        <input class="btn btn-primary" type="radio" ng-model="step1.tValue" value="true"> container <br>
-                        <input class="btn btn-primary" type="radio" ng-model="step1.fValue" value="false"> container-fixed <br>
+                        <input class="btn btn-primary" type="radio" ng-model="step1.tValue" value="true"> Pixel. <br>
+                        <input class="btn btn-primary" type="radio" ng-model="step1.fValue" value="false"> Prozent <br>
                     </div>
                 </step>
+                <!-- Steps 3 -->
                 <step class="step3">
                     <button step-previous class="btn btn-primary">Prev</button>
                     <button step-next class="btn btn-primary" ng-click="quizsumbit()">Next</button>
-                    <h3>What is responsive web design ?</h3>
-                    <input type="radio" checked autocomplete="on" ng-model="step2.tValue" value="true"> A way of designing web sites that focuses on the viewport of the device. <br>
-                    <input type="radio" autocomplete="on" ng-model="step2.fValue" value="false">A way of designing web pages by using cascading style sheets. <br>
-                    <input type="radio" autocomplete="on" ng-model="step2.fValue2" value="false">Using media queries to determine size of viewports. <br>
-                    <input type="radio" autocomplete="on" ng-model="step2.fValue3" value="false">All of the above </step>
+                    <h3>Fluid grid“ ist ein Begriff, der verwendet wird,um-------------zu beschreiben,</h3>
+                    <input type="radio" checked autocomplete="on" ng-model="step2.tValue" value="true"> Ein Layout<br>
+                    <input type="radio" autocomplete="on" ng-model="step2.fValue" value="false">Bilder
+                    <br>
+                    <input type="radio" autocomplete="on" ng-model="step2.fValue2" value="false">Text <br>
+                    <input type="radio" autocomplete="on" ng-model="step2.fValue3" value="false">Ansonst
+                </step>
                 <step class="step 4">
-
                     <button step-previous class="btn btn-primary">Prev</button>
                     <button step-next class="btn btn-primary" ng-click="quizsumbit()">Next</button>
-                    <h3>Which class provides a full width container, spanning the entire width of the viewport? 3</h3>
-                    <input type="radio" checked autocomplete="on" ng-model="step3.tValue" value="true">.container-fluid <br>
-                    <input type="radio" autocomplete="on" ng-model="step3.fValue" value="false">.container<br>
-                    <input type="radio" autocomplete="on" ng-model="step3.fValue1" value="false">.container-fixed<br>
-
+                    <h3>Wie kann man Media Queries verwendet werden </h3>
+                    <input type="radio" checked autocomplete="on" ng-model="step3.tValue" value="true">CSS-Dokument <br>
+                    <input type="radio" autocomplete="on" ng-model="step3.fValue" value="false">HTML-Dokument<br>
+                    <input type="radio" autocomplete="on" ng-model="step3.fValue1" value="false">JS-Dokument<br>
                 </step>
-
                 <step class="step5">
-
                     <button step-previous class="btn btn-primary">Prev</button>
                     <button step-next class="btn btn-primary" ng-click="quizsumbit()">Next</button>
                     <h3>„Responsive“ ist das Design einer Website, wenn ihre Seiten auf allen Browsern und auf allen Geräten optimal dargestellt werden.Optimal heisst :</h3>
@@ -91,96 +79,41 @@
                     <input type="radio" autocomplete="on" ng-model="step4.fValue" value="false">inhalt der Seiten unterscheidet sich
                     <br>
                     <input type="radio" autocomplete="on" ng-model="step4.fValue1" value="false">Seiten antworten nicht<br>
-
                 </step>
                 <step name="6">
-
                     <button step-previous class="btn btn-primary">Prev</button>
                     <button step-next class="btn btn-primary" ng-click="quizsumbit()">Next</button>
-                    <h3>Ethan bezog sich dabei auf einen recht neuen Bereich der Architektur namens »_________«, der es sich zum Ziel setzt, reaktionsfähige Gebäude bzw. Gebäudeelemente zu entwerfen, die in der Lage sind, auf äußere Einflüsse zu reagieren
+                    <h3>Von Natur zur Web .. Ethan hat die idee des RWD von "_______________" genommen.
                     </h3>
-                    <input type="radio" checked autocomplete="on" ng-model="step5.tValue" value="true">"Software Architektur"
+                    <input type="radio" checked autocomplete="on" ng-model="step5.tValue" value="true">"responsive Architektur"
                     <br>
                     <input type="radio" autocomplete="on" ng-model="step6.fValue" value="false">"Bauwerk Architektur"
-
                     <br>
-                    <input type="radio" autocomplete="on" ng-model="step6.fValue1" value="false">"responsive Architektur"<br>
-
+                    <input type="radio" autocomplete="on" ng-model="step6.fValue1" value="false">"Software Architektur"<br>
                 </step>
-
                 <step name="7">
-
                     <button step-previous class="btn btn-primary">Prev</button>
                     <button step-next class="btn btn-primary" ng-click="quizsumbit()">Next</button>
-                    <h3>welche Nachteile hat der RWD ? </h3>
+                    <h3>Welche Nachteile hat der RWD ? </h3>
                     <input type="radio" checked autocomplete="on" ng-model="step6.tValue" value="true">Langsamere Ladezeit
                     <br>
                     <input type="radio" autocomplete="on" ng-model="step6.fValue" value="false">Teuer
-
                     <br>
                     <input type="radio" autocomplete="on" ng-model="step6.fValue1" value="false">webseiten mit RWD laufen nur and ipads
                     <br>
-
                 </step>
-
                 <step class="step4" name="last">
-
                     <button step-previous class="btn btn-primary">Prev</button>
                     <button step-next class="btn btn-primary" ng-click="quizsumbit()">Next</button>
-                    <p>{{ houh }}</p>
-                    <h3>Result !!!</h3>
+                    <h3>Do you understand the Responsive web design theme : ?</h3>
+                    Realy
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target=".bs-example-modal-lg" ng-click="final()">Click here to get to Result.</button>
+                    <h1 style="color: red"><b> {{prozent}}  </b></h1>
 
+                    <img width="170" height="170" class="book" src="http://technologie.ngo.pl/files/wiadomosci.ngo.pl/public/filespublic/2014/20140609120000_Responsive_Web_Design_Logo.svg.jpg" />
+                    <img width="170" height="170" class="book" src="http://www.zahnarztpraxis-ammerland.de/box/images/006.jpg" />
                 </step>
-
-                <step>
-                    <button class="btn btn-primary" data-toggle="modal" data-target="#f2">Petite fenêtre</button>
-                    <div class="modal fade" id="f2">
-                        <div class="modal-dialog modal-sm">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    Je suis une petite fenêtre !
-                                    <button type="button" class="close" data-dismiss="modal">x</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <h2>Resultat</h2>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" ng-click="final()">Informations </button>
-
-                    <div class="modal fade" id="myModal" role="dialog">
-                        <div class="modal-dialog">
-                            <!-- Modal content-->
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    <h4 class="modal-title">Modal Header</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <p>
-                                        <h1> {{houh}} </h1>
-                                        <h1 style="color: red"> {{prozent}} %</h1>
-
-                                    </p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </step>
-                <step>
-                    <div class="modal-body">
-                        Le Tigre (Panthera tigris) est un mammifère carnivore de la famille des félidés...
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-info" data-dismiss="modal">Fermer</button>
-                    </div>
-
-                </step>
-
-
             </steps>
         </section>
-        </div>
     </div>
+</div>

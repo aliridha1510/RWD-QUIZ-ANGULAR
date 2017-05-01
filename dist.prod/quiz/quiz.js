@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.quiz', ['ngRoute', 'angular-steps'])
+angular.module('myApp.quiz', ['ngRoute', 'angular-steps', '$http'])
 
 .config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/quiz', {
