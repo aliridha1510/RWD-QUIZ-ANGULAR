@@ -46,6 +46,16 @@ angular.module('myApp.quiz', ['ngRoute', 'angular-steps'])
         $scope.alerts.push({ msg: 'Another alert!' });
     };
 
+    $scope.clickstep = function() {
+        $scope.step = { tValue: 'true', fValue: '' };
+
+
+    }
+    $scope.clickstepbutton = function() {
+        $scope.step = { tValue: '', fValue: 'false' };
+
+
+    }
 
     $scope.quizsumbit = function() {
         $scope.valeur = 0;

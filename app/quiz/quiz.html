@@ -38,8 +38,8 @@
                     <button step-previous class="btn btn-primary" id="animer-1" value="Animer">Prev</button>
                     <button class="btn btn-primary" step-next ng-click="quizsumbit();addAlert()" id="animer-2" value="Animer">Next</button>
                     <h3>1. Bootstrap 3 is mobile-first</h3>
-                    <input type="radio" ng-model="step.tValue" value="true" name="step1option" ng-checked="!step.tValue"> <b>Richtig</b> <br>
-                    <input type="radio" ng-model="step.fValue" value="false" name="step1option" ng-checked="!step.tValue">
+                    <input type="radio" ng-model="step.tValue" value="true" name="step1option" ng-checked="!step.tValue" ng-clik="clickstep()"> <b>Richtig</b> <br>
+                    <input type="radio" ng-model="step.fValue" value="false" name="step1option" ng-checked="!step.fValue" ng-click="clickstepbutton()">
                     <b> Falsch</b> <br>
                 </step>
                 <!-- Steps 2 -->
