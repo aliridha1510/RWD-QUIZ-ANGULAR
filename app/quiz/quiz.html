@@ -102,26 +102,21 @@
                 <step class="step4" name="last">
                     <button step-previous class="btn btn-primary">Prev</button>
                     <button step-next class="btn btn-primary" ng-click="quizsumbit()">Next</button>
-                    <center>
-                        <div class="container">
-                            <blockquote class="quote-box">
-                                <p class="quotation-mark">
-                                    “ Do you understand the Responsive web design theme ?
-                                    <img width="100" height="100" class="book" src="http://www.zahnarztpraxis-ammerland.de/box/images/006.jpg" />
+                    <div class="container">
+                        <blockquote class="quote-box">
+                            <p class="quotation-mark">
+                                “ Do you understand the Responsive web design theme ?
+                            </p>
+                            <p class="quote-text">
+                            </p>
+                            <hr>
+                            <div class="blog-post-actions">
+                                <p class="blog-post-bottom pull-right">
+                                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target=".bs-example-modal-lg" ng-click="final()">Click here to get to Result.</button>
+                                    <h1 style="color: red"><b> {{prozent| number:0}}  </b></h1>
                                 </p>
-                                <p class="quote-text">
-                                </p>
-                                <hr>
-                                <div class="blog-post-actions">
-                                    <p class="blog-post-bottom pull-left">
-                                        Realy </p>
-                                    <p class="blog-post-bottom pull-right">
-                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target=".bs-example-modal-lg" ng-click="final()">Click here to get to Result.</button>
-                                        <h1 style="color: red"><b> {{prozent| number:0}}  </b></h1>
-                                    </p>
-                                </div>
-                            </blockquote>
-                    </center>
+                            </div>
+                        </blockquote>
                     </div>
                 </step>
             </steps>
