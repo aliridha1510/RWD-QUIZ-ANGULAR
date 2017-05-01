@@ -49,10 +49,10 @@ angular.module('myApp.quiz', ['ngRoute', 'angular-steps'])
         }
         ///step2
     $scope.clickstep2button1 = function() {
-        $scope.step1 = { tValue: 'true', fValue: '' };
+        $scope.step2 = { tValue: 'true', fValue: '' };
     }
     $scope.clickstep2button2 = function() {
-        $scope.step1 = { tValue: '', fValue: 'false' };
+        $scope.step2 = { tValue: '', fValue: 'false' };
     }
 
     ///step3
