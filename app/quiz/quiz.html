@@ -38,8 +38,8 @@
                     <button step-previous class="btn btn-primary" id="animer-1" value="Animer">Prev</button>
                     <button class="btn btn-primary" step-next ng-click="quizsumbit();addAlert()" id="animer-2" value="Animer">Next</button>
                     <h3>1. Bootstrap 3 is mobile-first</h3>
-                    <input type="radio" ng-model="step.tValue" value="true" ng-init="checked=true"> <b>Richtig</b> <br>
-                    <input type="radio" ng-model="step.fValue" value="false" ng-init="checked=false">
+                    <input type="radio" ng-model="step.tValue" value="true" name="step1option" ng-checked="!step.tValue"> <b>Richtig</b> <br>
+                    <input type="radio" ng-model="step.fValue" value="false" name="step1option" ng-checked="checked=false">
                     <b> Falsch</b> <br>
                 </step>
                 <!-- Steps 2 -->
@@ -57,7 +57,7 @@
                     <button step-previous class="btn btn-primary">Prev</button>
                     <button step-next class="btn btn-primary" ng-click="quizsumbit()">Next</button>
                     <h3>Fluid grid“ ist ein Begriff, der verwendet wird,um-------------zu beschreiben,</h3>
-                    <input type="radio" checked autocomplete="on" ng-model="step2.tValue" value="true"> Ein Layout<br>
+                    <input type="radio" autocomplete="on" ng-model="step2.tValue" value="true"> Ein Layout<br>
                     <input type="radio" autocomplete="on" ng-model="step2.fValue" value="false">Bilder
                     <br>
                     <input type="radio" autocomplete="on" ng-model="step2.fValue2" value="false">Text <br>
@@ -87,9 +87,9 @@
                     </h3>
                     <input type="radio" checked autocomplete="on" ng-model="step5.tValue" value="true">"responsive Architektur"
                     <br>
-                    <input type="radio" autocomplete="on" ng-model="step6.fValue" value="false">"Bauwerk Architektur"
+                    <input type="radio" autocomplete="on" ng-model="step5.fValue" value="false">"Bauwerk Architektur"
                     <br>
-                    <input type="radio" autocomplete="on" ng-model="step6.fValue1" value="false">"Software Architektur"<br>
+                    <input type="radio" autocomplete="on" ng-model="step5.fValue1" value="false">"Software Architektur"<br>
                 </step>
                 <step name="7">
                     <button step-previous class="btn btn-primary">Prev</button>
