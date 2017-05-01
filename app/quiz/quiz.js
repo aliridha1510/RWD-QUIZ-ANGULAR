@@ -45,16 +45,76 @@ angular.module('myApp.quiz', ['ngRoute', 'angular-steps'])
     $scope.addAlert = function() {
         $scope.alerts.push({ msg: 'Another alert!' });
     };
-
-    $scope.clickstep = function() {
+    ///step0
+    $scope.clickstepbutton1 = function() {
         $scope.step = { tValue: 'true', fValue: '' };
-
-
     }
-    $scope.clickstepbutton = function() {
-        $scope.step = { tValue: '', fValue: 'false' };
-
-
+    $scope.clickstepbutton2 = function() {
+            $scope.step = { tValue: '', fValue: 'false' };
+        }
+        /////step1
+    $scope.clickstep1button1 = function() {
+        $scope.step1 = { tValue: 'true', fValue: '' };
+    }
+    $scope.clickstep1button2 = function() {
+            $scope.step1 = { tValue: '', fValue: 'false' };
+        }
+        ///step2
+    $scope.clickstep2button1 = function() {
+        $scope.step1 = { tValue: 'true', fValue: '' };
+    }
+    $scope.clickstep2button2 = function() {
+            $scope.step1 = { tValue: '', fValue: 'false' };
+        }
+        ///step3
+    $scope.clickstep2button1 = function() {
+        $scope.step2 = { tValue: 'true', fValue: '', fValue1: '' };
+    }
+    $scope.clickstep2button2 = function() {
+        $scope.step2 = { tValue: '', fValue: 'false', fValue1: '' };
+    }
+    $scope.clickstep2button3 = function() {
+            $scope.step2 = { tValue: '', fValue: '', fValue1: 'false' };
+        }
+        ////step4
+    $scope.clickstep4button1 = function() {
+        $scope.step4 = { tValue: 'true', fValue: '', fValue1: '' };
+    }
+    $scope.clickstep4button2 = function() {
+        $scope.step4 = { tValue: '', fValue: 'false', fValue1: '' };
+    }
+    $scope.clickstep4button3 = function() {
+            $scope.step4 = { tValue: '', fValue: '', fValue1: 'false' };
+        }
+        ////step5
+    $scope.clickstep5button1 = function() {
+        $scope.step5 = { tValue: 'true', fValue: '', fValue1: '' };
+    }
+    $scope.clickstep5button2 = function() {
+        $scope.step5 = { tValue: '', fValue: 'false', fValue1: '' };
+    }
+    $scope.clickstep5button3 = function() {
+            $scope.step5 = { tValue: '', fValue: '', fValue1: 'false' };
+        }
+        ////step6
+    $scope.clickstep6button1 = function() {
+        $scope.step6 = { tValue: 'true', fValue: '', fValue1: '' };
+    }
+    $scope.clickstep6button2 = function() {
+        $scope.step2 = { tValue: '', fValue: 'false', fValue1: '' };
+    }
+    $scope.clickstep6button3 = function() {
+            $scope.step2 = { tValue: '', fValue: '', fValue1: 'false' };
+        }
+        ////step7
+    $scope.clickstep7button1 = function() {
+        $scope.step2 = { tValue: 'true', fValue: '', fValue1: '' };
+    }
+    $scope.clickstep7button2 = function() {
+        $scope.step7 = { tValue: '', fValue: 'false', fValue1: '' };
+    }
+    $scope.clickstep7button3 = function() {
+        $scope.step7 = { tValue: '', fValue: '', fValue1: 'false' };
     }
 
     $scope.quizsumbit = function() {

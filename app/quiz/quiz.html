@@ -38,8 +38,8 @@
                     <button step-previous class="btn btn-primary" id="animer-1" value="Animer">Prev</button>
                     <button class="btn btn-primary" step-next ng-click="quizsumbit();addAlert()" id="animer-2" value="Animer">Next</button>
                     <h3>1. Bootstrap 3 is mobile-first</h3>
-                    <input type="radio" ng-model="step.tValue" value="true" name="step1option" ng-checked="!step.tValue" ng-clik="clickstep()"> <b>Richtig</b> <br>
-                    <input type="radio" ng-model="step.fValue" value="false" name="step1option" ng-checked="!step.fValue" ng-click="clickstepbutton()">
+                    <input type="radio" ng-model="step.tValue" value="true" name="step1option" ng-checked="!step.tValue" ng-clik="clickstepbutton1()"> <b>Richtig</b> <br>
+                    <input type="radio" ng-model="step.fValue" value="false" name="step1option" ng-checked="!step.fValue" ng-click="clickstepbutton2()">
                     <b> Falsch</b> <br>
                 </step>
                 <!-- Steps 2 -->
@@ -48,8 +48,8 @@
                     <button step-next class="btn btn-primary" ng-click="quizsumbit()" id="animer" value="Animer">Next</button>
                     <h3>Mit welchen Einheiten werden mit RWD gebaut </h3>
                     <div class="btn-group">
-                        <input class="btn btn-primary" type="radio" ng-model="step1.tValue" value="true"> Pixel. <br>
-                        <input class="btn btn-primary" type="radio" ng-model="step1.fValue" value="false"> Prozent <br>
+                        <input class="btn btn-primary" type="radio" ng-model="step1.tValue" value="true" ng-checked="!step1.tValue" ng-clik="clickstep1button1()"> Pixel. <br>
+                        <input class="btn btn-primary" type="radio" ng-model="step1.fValue" value="false" ng-checked="!step1.tValue" ng-clik="clickstep1button2()"> Prozent <br>
                     </div>
                 </step>
                 <!-- Steps 3 -->
@@ -57,49 +57,49 @@
                     <button step-previous class="btn btn-primary">Prev</button>
                     <button step-next class="btn btn-primary" ng-click="quizsumbit()">Next</button>
                     <h3>Fluid grid“ ist ein Begriff, der verwendet wird,um-------------zu beschreiben,</h3>
-                    <input type="radio" autocomplete="on" ng-model="step2.tValue" value="true"> Ein Layout<br>
-                    <input type="radio" autocomplete="on" ng-model="step2.fValue" value="false">Bilder
+                    <input type="radio" autocomplete="on" ng-model="step2.tValue" value="true" ng-checked="!step2.tValue" ng-clik="clickstep2button1()"> Ein Layout<br>
+                    <input type="radio" autocomplete="on" ng-model="step2.fValue" value="false" ng-checked="!step2.tValue" ng-clik="clickstep2button2()">Bilder
                     <br>
-                    <input type="radio" autocomplete="on" ng-model="step2.fValue2" value="false">Text <br>
-                    <input type="radio" autocomplete="on" ng-model="step2.fValue3" value="false">Ansonst
+                    <input type="radio" autocomplete="on" ng-model="step2.fValue2" value="false" ng-checked="!step2.tValue" ng-clik="clickstep2button3()">Text <br>
                 </step>
                 <step class="step 4">
                     <button step-previous class="btn btn-primary">Prev</button>
                     <button step-next class="btn btn-primary" ng-click="quizsumbit()">Next</button>
                     <h3>Wie kann man Media Queries verwendet werden </h3>
-                    <input type="radio" checked autocomplete="on" ng-model="step3.tValue" value="true">CSS-Dokument <br>
-                    <input type="radio" autocomplete="on" ng-model="step3.fValue" value="false">HTML-Dokument<br>
-                    <input type="radio" autocomplete="on" ng-model="step3.fValue1" value="false">JS-Dokument<br>
+                    <input type="radio" checked autocomplete="on" ng-model="step3.tValue" ng-checked="!step3.tValue" ng-clik="clickstep3button1()" value="true">CSS-Dokument <br>
+                    <input type="radio" autocomplete="on" ng-model="step3.fValue" value="false" ng-checked="!step3.tValue" ng-clik="clickstep3button2()">HTML-Dokument<br>
+                    <input type="radio" autocomplete="on" ng-model="step3.fValue1" value="false" ng-checked="!step3.tValue" ng-clik="clickstep3button3()">JS-Dokument<br>
                 </step>
                 <step class="step5">
                     <button step-previous class="btn btn-primary">Prev</button>
                     <button step-next class="btn btn-primary" ng-click="quizsumbit()">Next</button>
                     <h3>„Responsive“ ist das Design einer Website, wenn ihre Seiten auf allen Browsern und auf allen Geräten optimal dargestellt werden.Optimal heisst :</h3>
-                    <input type="radio" checked autocomplete="on" ng-model="step4.tValue" value="true">Das gleichermaßen auf dem kleinen Screen eines Smartphones, auf dem Laptop-Bildschirm und auf dem riesigen Desktop-Monitor.<br>
-                    <input type="radio" autocomplete="on" ng-model="step4.fValue" value="false">inhalt der Seiten unterscheidet sich
+                    <input type="radio" checked autocomplete="on" ng-model="step4.tValue" value="true" ng-checked="!step4.tValue" ng-clik="clickstep4button1()">Das gleichermaßen auf dem kleinen Screen eines Smartphones, auf dem Laptop-Bildschirm und auf
+                    dem riesigen Desktop-Monitor.<br>
+                    <input type="radio" autocomplete="on" ng-model="step4.fValue" value="false" ng-checked="!step4.tValue" ng-clik="clickstep4button2()">inhalt der Seiten unterscheidet sich
                     <br>
-                    <input type="radio" autocomplete="on" ng-model="step4.fValue1" value="false">Seiten antworten nicht<br>
+                    <input type="radio" autocomplete="on" ng-model="step4.fValue1" value="false" ng-checked="!step4.tValue" ng-clik="clickstep4button3()">Seiten antworten nicht<br>
                 </step>
                 <step name="6">
                     <button step-previous class="btn btn-primary">Prev</button>
                     <button step-next class="btn btn-primary" ng-click="quizsumbit()">Next</button>
                     <h3>Von Natur zur Web .. Ethan hat die idee des RWD von "_______________" genommen.
                     </h3>
-                    <input type="radio" checked autocomplete="on" ng-model="step5.tValue" value="true">"responsive Architektur"
+                    <input type="radio" checked autocomplete="on" ng-model="step5.tValue" value="true" ng-checked="!step5.tValue" ng-clik="clickstep5button1()">"responsive Architektur"
                     <br>
-                    <input type="radio" autocomplete="on" ng-model="step5.fValue" value="false">"Bauwerk Architektur"
+                    <input type="radio" autocomplete="on" ng-model="step5.fValue" value="false" ng-checked="!step5.tValue" ng-clik="clickstep5button2()">"Bauwerk Architektur"
                     <br>
-                    <input type="radio" autocomplete="on" ng-model="step5.fValue1" value="false">"Software Architektur"<br>
+                    <input type="radio" autocomplete="on" ng-model="step5.fValue1" value="false" ng-checked="!step5.tValue" ng-clik="clickstep5button3()">"Software Architektur"<br>
                 </step>
                 <step name="7">
                     <button step-previous class="btn btn-primary">Prev</button>
                     <button step-next class="btn btn-primary" ng-click="quizsumbit()">Next</button>
                     <h3>Welche Nachteile hat der RWD ? </h3>
-                    <input type="radio" checked autocomplete="on" ng-model="step6.tValue" value="true">Langsamere Ladezeit
+                    <input type="radio" checked autocomplete="on" ng-model="step6.tValue" value="true" ng-checked="!step6.tValue" ng-clik="clickstep6button1()">Langsamere Ladezeit
                     <br>
-                    <input type="radio" autocomplete="on" ng-model="step6.fValue" value="false">Teuer
+                    <input type="radio" autocomplete="on" ng-model="step6.fValue" value="false" ng-checked="!step6.tValue" ng-clik="clickstep6button2()">Teuer
                     <br>
-                    <input type="radio" autocomplete="on" ng-model="step6.fValue1" value="false">webseiten mit RWD laufen nur and ipads
+                    <input type="radio" autocomplete="on" ng-model="step6.fValue1" value="false" ng-checked="!step.tValue" ng-clik="clickstep6button3()">webseiten mit RWD laufen nur and ipads
                     <br>
                 </step>
                 <step class="step4" name="last">
