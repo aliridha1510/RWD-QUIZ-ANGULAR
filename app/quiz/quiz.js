@@ -89,7 +89,7 @@ angular.module('myApp.quiz', ['ngRoute', 'angular-steps'])
     $scope.houh = "";
     $scope.final = function() {
 
-        $scope.prozent = ($scope.valeur % 7) * 100;
+        $scope.prozent = ($scope.valeur / 7) * 100;
 
         console.log($scope.prozent);
         if ($scope.prozent < 10) {
